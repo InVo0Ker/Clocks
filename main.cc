@@ -92,7 +92,7 @@ class User{
     std::string surname;
     Clock *p;
     public:
-    User(std::string _name, std::string _surname, double _budget, Clock *t): name(_name), surname(_surname){}
+    User(std::string _name, std::string _surname): name(_name), surname(_surname){}
     void questionImportant(){
         std::string choice;
         std::cout<<"What type of clocks you want to use: ";
@@ -117,5 +117,7 @@ class User{
 };
 
 int main(){
-
+    User john("John","Cramel");
+    john.questionImportant();
+    john.setAlarm();
 }
