@@ -1,12 +1,14 @@
 #include <iostream>
 #include <vector>
+#include <unistd.h>
 
 class Clock{
     protected:
     std::string brand;
+    std::string color; 
     double price;
     public:
-    Clock(std::string _brand, double _price): brand(_brand), price(_price){}
+    Clock(std::string _brand, double _price, std::string _color): brand(_brand), price(_price), color(_color){}
     virtual void alarm(){
         std::cout<<"Bell singing...";
     }
@@ -67,6 +69,24 @@ class QuartzClock : public Clock{
         chooseSound();
     }
 };
+class SandClock : public Clock{
+    int holdMinutes;
+    public:
+    SandClock(std::string _brand, double _price, std::string _color, int _holder): Clock(_brand,_price,_color), holdMinutes(_holder){};
+    void flipSandClock(){
+        std::cout<<"Done "<<std::endl;
+    };
+    void hang() override{
+        throw std::logic_error("What do you mean hang sand clock, can't do that ");
+    }
+    void alarm() override{
+        throw std::logic_error("Sand clock doesn't have alarm, they have timer ");
+    }
+    void timer(){
+        sleep(holdMinutes);
+        std::cout<<"Done "<<std::endl;
+    }
+};
 class User{
     std::string name;
     std::string surname;
@@ -97,5 +117,5 @@ class User{
 };
 
 int main(){
-    
+
 }
