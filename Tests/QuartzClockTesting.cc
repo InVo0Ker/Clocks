@@ -23,10 +23,10 @@ bool testColor(){
     return true;
 }
 bool testChoose(){
-    // for example we want bla-bla it will be third option
+    // for example we want bla-bla-bla it will be third option
     QuartzClock *p = new QuartzClock("rollo",10,"white");
     std::string Sound = p->chooseSound();
-    assert(Sound == "bla-bla");
+    assert(Sound == "bla-bla-bla");
     return true;
 }
 

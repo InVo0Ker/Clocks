@@ -27,7 +27,7 @@ bool testHangException(){
         Watch *p = new Watch("rollo",10,"white"); 
         p->hang();
     } catch(std::logic_error& err){
-        assert(std::string(err.what()) == std::string("What do you mean hang, I can't do it"));
+        assert(std::string(err.what()) == std::string("What do you mean hang, I can't do it!"));
     }
     return true;
 }

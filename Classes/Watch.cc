@@ -21,7 +21,7 @@ class Watch : public Clock{
         useSound();
     }
     void hang() override{
-        throw std::logic_error("What do you mean hang, I can't do it");
+        throw std::logic_error("What do you mean hang, I can't do it!");
     }
     const std::string getBrand() const{
         return brand;

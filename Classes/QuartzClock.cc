@@ -11,7 +11,7 @@ class QuartzClock : public Clock{
     QuartzClock(std::string _brand, double _price, std::string _color): Clock(_brand,_price,_color) {};
     void addSound(){
         int count;
-        std::cout<<"How many sounds your quartz clock will have?: ";
+        std::cout<<"How many sounds your quartz clock will have?:"<<std::endl;
         std::cin>>count;
         for(int i = 0; i < count; i++){
             std::string sound;

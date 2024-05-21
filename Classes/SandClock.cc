@@ -14,10 +14,10 @@ class SandClock : public Clock{
         std::cout<<"Done "<<std::endl;
     };
     void hang() override{
-        throw std::logic_error("What do you mean hang sand clock, can't do that ");
+        throw std::logic_error("What do you mean hang sand clock, can't do that! ");
     }
     void alarm() override{
-        throw std::logic_error("Sand clock doesn't have alarm, they have timer ");
+        throw std::logic_error("Sand clock doesn't have alarm, they have timer! ");
     }
     void timer(){
         sleep(holdMinutes);

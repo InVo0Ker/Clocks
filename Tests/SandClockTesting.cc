@@ -33,7 +33,7 @@ bool testAlarmException(){
         SandClock *p = new SandClock("rollo",10,"white",10); 
         p->alarm();
     } catch(std::logic_error& err){
-        assert(std::string(err.what()) == std::string("Sand clock doesn't have alarm, they have timer "));
+        assert(std::string(err.what()) == std::string("Sand clock doesn't have alarm, they have timer! "));
     }
     return true;
 }
@@ -42,7 +42,7 @@ bool testHangException(){
         SandClock *p = new SandClock("rollo",10,"white",10); 
         p->hang();
     } catch(std::logic_error& err){
-        assert(std::string(err.what()) == std::string("What do you mean hang sand clock, can't do that "));
+        assert(std::string(err.what()) == std::string("What do you mean hang sand clock, can't do that! "));
     }
     return true;
 }

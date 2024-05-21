@@ -11,7 +11,7 @@ class Clock{
     public:
     Clock(std::string _brand, double _price, std::string _color): brand(_brand), price(_price), color(_color){}
     virtual void alarm(){
-        std::cout<<"Bell singing...";
+        std::cout<<"Bell singing....";
     }
     virtual void hang(){
         std::cout<<"Done";

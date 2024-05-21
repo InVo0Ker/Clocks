@@ -22,7 +22,7 @@ bool testExceptionQuestion(){
         User john("John","Cramel");
         john.questionImportant();
     } catch(std::logic_error& err){
-        assert(std::string(err.what()) == std::string("Write a type please correctly..."));
+        assert(std::string(err.what()) == std::string("Write a type please correctly...."));
     }
     return true;
 }

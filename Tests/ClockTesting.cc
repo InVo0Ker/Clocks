@@ -4,19 +4,19 @@
 #include "../Classes/Clock.cc"
 
 bool testBrand(){
-    Clock p("rollo",10,"white");
+    Clock p("rolle",10,"white");
     std::string Brand = p.getBrand();
-    assert(Brand == "rollo");
+    assert(Brand == "rolle");
     return true;
 }
 bool testPrice(){
-    Clock p("rollo",10,"white");
+    Clock p("rolle",10,"white");
     double Price = p.getPrice();
     assert(Price == 10);
     return true;
 }
 bool testColor(){
-    Clock p("rollo",10,"white");
+    Clock p("rolle",10,"white");
     std::string Color = p.getColor();
     assert(Color == "white");
     return true;

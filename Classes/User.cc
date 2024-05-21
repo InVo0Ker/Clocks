@@ -27,7 +27,7 @@ class User{
         } else if(choice == "sand"){
             p = new SandClock("rollo",10,"white",20);
         } else{
-            throw std::logic_error("Write a type please correctly...");
+            throw std::logic_error("Write a type please correctly....");
         }
     };
     void setAlarm(){
