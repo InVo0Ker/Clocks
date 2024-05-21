@@ -7,9 +7,8 @@
 #include "./Classes/SandClock.cc"
 #include "./Classes/Watch.cc"
 
-
 int main(){
-    User john("John","Cramel");
+    User john("John","Crame");
     john.questionImportant();
     john.setAlarm();
 }
