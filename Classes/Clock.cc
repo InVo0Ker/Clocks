@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <vector>
 #include <unistd.h>
@@ -20,6 +21,9 @@ class Clock{
     }
     const double getPrice() const{
         return price;
+    }
+    const std::string getColor() const{
+        return color;
     }
     virtual ~Clock(){};
 };

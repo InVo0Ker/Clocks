@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <vector>
 #include <unistd.h>
@@ -31,5 +32,14 @@ class QuartzClock : public Clock{
     }
     void alarm() override{
         std::cout<<chooseSound();
+    }
+        const std::string getBrand() const{
+        return brand;
+    }
+    const double getPrice() const{
+        return price;
+    }
+    const std::string getColor() const{
+        return color;
     }
 };

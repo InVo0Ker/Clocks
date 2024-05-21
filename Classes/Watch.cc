@@ -23,4 +23,13 @@ class Watch : public Clock{
     void hang() override{
         throw std::logic_error("What do you mean hang, I can't do it");
     }
+    const std::string getBrand() const{
+        return brand;
+    }
+    const double getPrice() const{
+        return price;
+    }
+    const std::string getColor() const{
+        return color;
+    }
 };

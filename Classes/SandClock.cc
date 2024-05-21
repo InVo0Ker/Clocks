@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <vector>
 #include <unistd.h>
@@ -21,5 +22,17 @@ class SandClock : public Clock{
     void timer(){
         sleep(holdMinutes);
         std::cout<<"Done "<<std::endl;
+    }
+    const std::string getBrand() const{
+        return brand;
+    }
+    const double getPrice() const{
+        return price;
+    }
+    const std::string getColor() const{
+        return color;
+    }
+    const int minutesGet() const{
+        return holdMinutes;
     }
 };

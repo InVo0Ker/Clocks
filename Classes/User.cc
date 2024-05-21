@@ -33,5 +33,11 @@ class User{
     void setAlarm(){
         p->alarm();
     }
+    const std::string getName() const{
+        return name;
+    }
 
+    const std::string getSurname() const{
+        return surname;
+    }
 };
