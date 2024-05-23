@@ -5,12 +5,14 @@
 #include "Clock.cc"
 #include "QuartzClock.cc"
 #include "SandClock.cc"
+#include "CuckooClock.cc"
 #include "Watch.cc"
 
 class User{
     std::string name;
     std::string surname;
     Clock *p = nullptr;
+    CuckooClock *cuckoo = nullptr;
     public:
     User(std::string _name, std::string _surname): name(_name), surname(_surname){}
     void questionImportant(){
@@ -26,6 +28,16 @@ class User{
             p = new Watch("rollo",10,"white");
         } else if(choice == "sand"){
             p = new SandClock("rollo",10,"white",20);
+        } else if(choice == "cuckoo"){
+            CuckooClock *cuckoo = new CuckooClock("rollo", 10, "white");
+            p = cuckoo;
+            int h, m;
+            std::cout << "Set the time for the CuckooClock (hour minute): ";
+            std::cin >> h >> m;
+            cuckoo->setTime(h, m);
+            std::cout << "Displaying the current time of the CuckooClock:" << std::endl;
+            cuckoo->displayTime();
+            cuckoo->tickTock();
         } else{
             throw std::logic_error("Write a type please correctly....");
         }

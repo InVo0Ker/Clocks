@@ -6,6 +6,7 @@
 #include "./Classes/QuartzClock.cc"
 #include "./Classes/SandClock.cc"
 #include "./Classes/Watch.cc"
+#include "./Classes/CuckooClock.cc"
 
 int main(){
     User john("John","Crame");
